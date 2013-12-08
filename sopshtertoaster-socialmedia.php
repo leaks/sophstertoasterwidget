@@ -2,6 +2,9 @@
 /*
 Plugin Name: Sophstertoaster - social media plugin
 Description: Social media plugin for Sophstertoaster.com
+Version: 1.0
+Author: Matt Harrison
+Author URI: http://zerophaze.org
 */
 /* Start Adding Functions Below this Line */
 
@@ -30,9 +33,18 @@ class sopshtertoaster_sm_widget extends WP_Widget {
 		else {
 			$title = __( 'New title' , 'sophstertoaster_sm_domain' );
 		}
+		if ( isset( $instance[ 'instagramURI' ] ) ) {
+			$instagramURI = $instance[ 'instagramURI' ];
+		}
+		else {
+			$instagramURI = __( 'Instagram URI', 'sophstertoaster_sm_domain' );
+		}
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?> name="<?php echo $this->get_field_name( 'title' ); ?> type="text" value="<?php echo esc_attr( $title ); ?> />
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'instagramURI' ); ?>"><?php _e( 'Instagram URI:' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'instagramURI' ); ?>" name="<?php echo $this->get_field_name( 'instagramURI' ); ?>" type="text" value="<?php echo esc_attr( $instagramURI ); ?>" />
 		</p>
 		<?php
 	}
