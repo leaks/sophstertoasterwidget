@@ -26,14 +26,14 @@ class sopshtertoaster_sm_widget extends WP_Widget {
 		?>
 		<div id="sopshtertoaster_sm_widget_content">
 			<div id="sopshtertoaster_sm_widget_row1">
-				<a href="<?php echo $instance['facebookURI']; ?>"><img src="<?php echo plugins_url('images/Facebook.png', __FILE__); ?>"/> </a>
-				<a href="<?php echo $instance['instagramURI']; ?>"><img src="<?php echo plugins_url('images/Instagram.png', __FILE__); ?>"/> </a>
-				<a href="<?php echo $instance['pinterestURI']; ?>"><img src="<?php echo plugins_url('images/Pinterest.png', __FILE__); ?>"/> </a>
+				<a href="<?php echo $instance['facebookURI']; ?>"><img src="<?php echo plugins_url('images/Facebook.png', __FILE__); ?>" alt="Facebook"/> </a>
+				<a href="<?php echo $instance['instagramURI']; ?>"><img src="<?php echo plugins_url('images/Instagram.png', __FILE__); ?>" alt="Instagram"/> </a>
+				<a href="<?php echo $instance['pinterestURI']; ?>"><img src="<?php echo plugins_url('images/Pinterest.png', __FILE__); ?>" alt="Pinterest"/> </a>
 			</div>
 			<div id="sopshtertoaster_sm_widget_row2">
-				<a href="<?php echo $instance['etsyURI']; ?>"><img src="<?php echo plugins_url('images/Etsy.png', __FILE__); ?>"/> </a>
-				<a href="<?php echo $instance['googleplusURI']; ?>" rel="publisher"><img src="<?php echo plugins_url('images/GooglePlus.png', __FILE__); ?>"/> </a>
-				<a href="<?php echo $instance['contactURI']; ?>"><img src="<?php echo plugins_url('images/Contact.png', __FILE__); ?>"/> </a>
+				<a href="<?php echo $instance['etsyURI']; ?>"><img src="<?php echo plugins_url('images/Etsy.png', __FILE__); ?>" alt="Etsy"/> </a>
+				<a href="<?php echo $instance['googleplusURI']; ?>" rel="publisher"><img src="<?php echo plugins_url('images/GooglePlus.png', __FILE__); ?>" alt="Google+"/> </a>
+				<a href="<?php echo $instance['contactURI']; ?>"><img src="<?php echo plugins_url('images/Contact.png', __FILE__); ?>" alt="Contact"/> </a>
 			</div>
 		</div>
 		<?php
