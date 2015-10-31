@@ -2,7 +2,7 @@
 /*
 Plugin Name: Sophstertoaster - social media plugin
 Description: Social media plugin for Sophstertoaster.com
-Version: 1.1
+Version: 1.2
 Author: Matt Harrison
 Author URI: http://zerophaze.org
 */
@@ -32,8 +32,8 @@ class sopshtertoaster_sm_widget extends WP_Widget {
 			</div>
 			<div id="sopshtertoaster_sm_widget_row2">
 				<a href="<?php echo $instance['etsyURI']; ?>" target="_blank"><img src="<?php echo plugins_url('images/Etsy.png', __FILE__); ?>" alt="Etsy"/> </a>
-				<a href="<?php echo $instance['googleplusURI']; ?>" rel="publisher" target="_blank"><img src="<?php echo plugins_url('images/GooglePlus.png', __FILE__); ?>" alt="Google+"/> </a>
 				<a href="<?php echo $instance['twitterURI']; ?>" target="_blank"><img src="<?php echo plugins_url('images/Twitter.png', __FILE__); ?>" alt="Twitter"/> </a>
+				<a href="<?php echo $instance['contactURI']; ?>" rel="publisher" target="_blank"><img src="<?php echo plugins_url('images/Contact.png', __FILE__); ?>" alt="Contact"/> </a>
 			</div>
 		</div>
 		<?php
@@ -71,17 +71,17 @@ class sopshtertoaster_sm_widget extends WP_Widget {
 		else {
 			$pinterestURI = __( 'Pinterest URI', 'sophstertoaster_sm_domain' );
 		}
-		if ( isset( $instance[ 'googleplusURI' ] ) ) {
-			$googleplusURI = $instance[ 'googleplusURI' ];
-		}
-		else {
-			$googleplusURI = __( 'Google Plus URI', 'sophstertoaster_sm_domain' );
-		}
-		if ( isset( $instance[ 'twitterURI' ] ) ) {
+				if ( isset( $instance[ 'twitterURI' ] ) ) {
 			$twitterURI = $instance[ 'twitterURI' ];
 		}
 		else {
 			$twitterURI = __( 'Twitter URI', 'sophstertoaster_sm_domain' );
+		}
+		if ( isset( $instance[ 'contactURI' ] ) ) {
+			$contactURI = $instance[ 'contactURI' ];
+		}
+		else {
+			$contactURI = __( 'Contact URI', 'sophstertoaster_sm_domain' );
 		}
 		?>
 		<p>
@@ -100,10 +100,10 @@ class sopshtertoaster_sm_widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'pinterestURI' ); ?>"><?php _e( 'Pinterest URI:' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'pinterestURI' ); ?>" name="<?php echo $this->get_field_name( 'pinterestURI' ); ?>" type="text" value="<?php echo esc_attr( $pinterestURI ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'googleplusURI' ); ?>"><?php _e( 'Google Plus URI:' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'googleplusURI' ); ?>" name="<?php echo $this->get_field_name( 'googleplusURI' ); ?>" type="text" value="<?php echo esc_attr( $googleplusURI ); ?>" />
-		</p>
-		<p>
 			<label for="<?php echo $this->get_field_id( 'twitterURI' ); ?>"><?php _e( 'Twitter URI:' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'twitterURI' ); ?>" name="<?php echo $this->get_field_name( 'twitterURI' ); ?>" type="text" value="<?php echo esc_attr( $twitterURI ); ?>" />
+		</p>
+				<p>
+			<label for="<?php echo $this->get_field_id( 'contactURI' ); ?>"><?php _e( 'Contact URI:' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'contactURI' ); ?>" name="<?php echo $this->get_field_name( 'contactURI' ); ?>" type="text" value="<?php echo esc_attr( $contactURI ); ?>" />
 		</p>
 		<?php
 	}
@@ -115,8 +115,8 @@ class sopshtertoaster_sm_widget extends WP_Widget {
 		$instance['facebookURI']=( ! empty( $new_instance['facebookURI'] ) ) ? strip_tags( $new_instance['facebookURI'] ) : '';
 		$instance['etsyURI']=( ! empty( $new_instance['etsyURI'] ) ) ? strip_tags( $new_instance['etsyURI'] ) : '';
 		$instance['pinterestURI']=( ! empty( $new_instance['pinterestURI'] ) ) ? strip_tags( $new_instance['pinterestURI'] ) : '';
-		$instance['googleplusURI']=( ! empty( $new_instance['googleplusURI'] ) ) ? strip_tags( $new_instance['googleplusURI'] ) : '';
 		$instance['twitterURI']=( ! empty( $new_instance['twitterURI'] ) ) ? strip_tags( $new_instance['twitterURI'] ) : '';
+		$instance['contactURI']=( ! empty( $new_instance['contactURI'] ) ) ? strip_tags( $new_instance['contactURI'] ) : '';
 		return $instance;
 	}
 } // sophstertoaster_sm_widget
