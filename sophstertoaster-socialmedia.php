@@ -28,12 +28,7 @@ class sopshtertoaster_sm_widget extends WP_Widget {
 			<div id="sopshtertoaster_sm_widget_row1">
 				<a href="<?php echo $instance['facebookURI']; ?>" target="_blank"><img src="<?php echo plugins_url('images/Facebook.png', __FILE__); ?>" alt="Facebook"/> </a>
 				<a href="<?php echo $instance['instagramURI']; ?>" target="_blank"><img src="<?php echo plugins_url('images/Instagram.png', __FILE__); ?>" alt="Instagram"/> </a>
-				<a href="<?php echo $instance['pinterestURI']; ?>" target="_blank"><img src="<?php echo plugins_url('images/Pinterest.png', __FILE__); ?>" alt="Pinterest"/> </a>
-			</div>
-			<div id="sopshtertoaster_sm_widget_row2">
-				<a href="<?php echo $instance['etsyURI']; ?>" target="_blank"><img src="<?php echo plugins_url('images/Etsy.png', __FILE__); ?>" alt="Etsy"/> </a>
 				<a href="<?php echo $instance['twitterURI']; ?>" target="_blank"><img src="<?php echo plugins_url('images/Twitter.png', __FILE__); ?>" alt="Twitter"/> </a>
-				<a href="<?php echo $instance['contactURI']; ?>" rel="publisher" target="_blank"><img src="<?php echo plugins_url('images/Contact.png', __FILE__); ?>" alt="Contact"/> </a>
 			</div>
 		</div>
 		<?php
